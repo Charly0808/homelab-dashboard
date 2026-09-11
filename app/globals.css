@@ -1,0 +1,4 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{color-scheme:dark} body{background:#070b12;color:#e5f0ff} *{box-sizing:border-box} .grid-bg{background-image:linear-gradient(rgba(61,220,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(61,220,255,.05) 1px,transparent 1px);background-size:36px 36px}.glass{background:linear-gradient(135deg,rgba(17,24,39,.92),rgba(13,19,32,.86));border:1px solid rgba(120,180,255,.16);box-shadow:0 20px 80px rgba(0,0,0,.28)}

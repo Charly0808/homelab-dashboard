@@ -1,0 +1,6 @@
+export type ServiceCategory='Infrastructure'|'Docker'|'Monitoring'|'Media'|'Network'|'Storage'|'Other'|string;
+export type ServiceConfig={name:string;url:string;icon?:string;category:ServiceCategory;healthUrl?:string;timeoutMs?:number};
+export type Status='online'|'slow'|'offline'|'unknown';
+export type ServiceStatus=ServiceConfig & {status:Status; responseTime:number|null; checkedAt:string; error?:string};
+export type Sensor={name:string;status:string;value?:number|string|null;unit?:string|null;reading?:string|null};
+export type IdracInfo={configured:boolean;connected:boolean;status:'online'|'offline'|'degraded'|'unknown';checkedAt:string;lastSuccessfulCheck?:string;error?:string;idracUrl?:string;model?:string;manufacturer?:string;hostname?:string;serviceTag?:string;serialNumber?:string;powerState?:string;health?:string;firmwareVersion?:string;biosVersion?:string;cpu?:{summary?:string;count?:number;processors?:Sensor[];temperatureC?:number|string|null;utilizationPct?:number|string|null};memory?:{totalGiB?:number|string|null;usedGiB?:number|string|null;summary?:string;dimms?:Sensor[]};temperatures?:Sensor[];fans?:Sensor[];power?:{watts?:number|string|null;status?:string;supplies?:Sensor[]};storage?:{controllers?:Sensor[];virtualDisks?:Sensor[];physicalDisks?:Sensor[];raidStatus?:string};network?:Sensor[];rawLinks?:Record<string,string>};

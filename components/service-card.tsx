@@ -1,0 +1,4 @@
+import type { ServiceStatus } from '@/lib/types';
+import { StatusPill } from './status';
+const icons:Record<string,string>={server:'🖥️',docker:'🐳',grafana:'📊',home:'🏠',media:'🎬',storage:'💾'};
+export function ServiceCard({service}:{service:ServiceStatus}){return <a href={service.url} target="_blank" rel="noreferrer" className="group rounded-2xl border border-white/10 bg-slate-950/55 p-5 transition hover:-translate-y-0.5 hover:border-lab-cyan/60 hover:shadow-glow"><div className="flex items-start justify-between gap-3"><div className="text-3xl">{icons[service.icon||'']||'🔗'}</div><StatusPill status={service.status}/></div><h3 className="mt-4 text-lg font-bold text-white group-hover:text-lab-cyan">{service.name}</h3><p className="mt-1 truncate text-sm text-slate-400">{service.url}</p><p className="mt-3 text-xs text-slate-500">{service.responseTime == null ? 'No response' : `${service.responseTime} ms`}</p></a>}

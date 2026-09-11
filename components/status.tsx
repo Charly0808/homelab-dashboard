@@ -1,0 +1,3 @@
+import type { Status } from '@/lib/types';
+export function StatusPill({status,label}:{status:Status|string;label?:string}){const color=status==='online'?'bg-lab-green/15 text-lab-green ring-lab-green/30':status==='slow'||status==='degraded'?'bg-lab-amber/15 text-lab-amber ring-lab-amber/30':status==='offline'?'bg-lab-red/15 text-lab-red ring-lab-red/30':'bg-slate-500/15 text-slate-300 ring-slate-500/30'; const dot=status==='online'?'🟢':status==='slow'||status==='degraded'?'🟠':status==='offline'?'🔴':'⚪'; return <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${color}`}>{dot} {label??status}</span>}
+export function fmt(v:unknown, suffix=''){return v===undefined||v===null||v===''?'N/A':`${v}${suffix}`}

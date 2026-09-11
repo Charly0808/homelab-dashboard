@@ -1,0 +1,8 @@
+[
+  {"name":"Proxmox","url":"https://proxmox.example.local","icon":"server","category":"Infrastructure"},
+  {"name":"Portainer","url":"https://portainer.example.local","icon":"docker","category":"Docker"},
+  {"name":"Grafana","url":"https://grafana.example.local","icon":"grafana","category":"Monitoring"},
+  {"name":"Home Assistant","url":"https://homeassistant.example.local","icon":"home","category":"Other"},
+  {"name":"Plex","url":"https://plex.example.local","icon":"media","category":"Media"},
+  {"name":"NAS","url":"https://nas.example.local","icon":"storage","category":"Storage"}
+]

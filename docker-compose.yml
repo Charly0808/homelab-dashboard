@@ -1,0 +1,10 @@
+services:
+  homelab-dashboard:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./config/services.json:/app/config/services.json:ro
+    restart: unless-stopped
